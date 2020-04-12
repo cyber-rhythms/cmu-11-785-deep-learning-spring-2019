@@ -1,0 +1,480 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2019/www/homeworks/hw0/
+Subject: 11-785 Introduction to Deep Learning
+Date: Fri, 31 Jan 2020 15:45:17 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--3rXIJ82HEJIJdCmy9yW5FDYuUK1QQFQ07grJ8LL2Ts----"
+
+
+------MultipartBoundary--3rXIJ82HEJIJdCmy9yW5FDYuUK1QQFQ07grJ8LL2Ts----
+Content-Type: text/html
+Content-ID: <frame-0F34C711A1460C128E6559DF7B0BD88A@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2019/www/homeworks/hw0/
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3Dwindows-1252">
+<title>11-785 Introduction to Deep Learning</title>
+</head>
+<frameset rows=3D"150,*" frameborder=3D"0">
+   <frame name=3D"top" src=3D"cid:frame-50EB7231267F93416DBFB7582D6E305A@mh=
+tml.blink">
+   <frameset cols=3D"250,*" frameborder=3D"0">
+       <frame name=3D"topics" src=3D"cid:frame-45FA7903E3AFFE8E3E859073AB61=
+AA34@mhtml.blink">
+       <frame name=3D"mainbox" src=3D"cid:frame-2DEDC3298262EC0DF9E076F94C4=
+09B15@mhtml.blink">
+   </frameset>
+   <noframes>
+   <body vlink=3D"#A80000" alink=3D"#A80000">
+      Your browser does not support frames.
+   </body>
+   </noframes>
+</frameset>
+
+</html>
+------MultipartBoundary--3rXIJ82HEJIJdCmy9yW5FDYuUK1QQFQ07grJ8LL2Ts----
+Content-Type: text/html
+Content-ID: <frame-50EB7231267F93416DBFB7582D6E305A@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2019/www/homeworks/hw0/hw0header.html
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dwindows-1252">
+<link href=3D"https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2=
+019/www/homeworks/formatting.css" rel=3D"stylesheet" type=3D"text/css">
+<title>11-785 Introduction to Deep Learning</title>
+</head>
+
+<body><h1 style=3D"margin-top: 50px;"> 11-785 Homework 0: Coding exercises<=
+/h1>
+
+
+</body></html>
+------MultipartBoundary--3rXIJ82HEJIJdCmy9yW5FDYuUK1QQFQ07grJ8LL2Ts----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2019/www/homeworks/formatting.css
+
+@charset "windows-1252";
+
+.figure { color: black; background-color: white; text-align: center; font-s=
+ize: 21px; border: 0px; font-family: calibri !important; }
+
+.box { color: black; background-color: rgb(193, 255, 51); text-align: left;=
+ font-size: 21px; border: 1px solid green; font-family: calibri !important;=
+ }
+
+.box h4 { color: rgb(191, 0, 0); font-size: 27px; text-align: left; margin-=
+top: 15px; font-family: Garamond !important; }
+
+body { color: rgb(0, 0, 0); font-size: 24px; text-align: left; font-family:=
+ Garamond !important; }
+
+a { }
+
+h1 { color: rgb(168, 0, 0); font-size: 60px; text-align: center; font-famil=
+y: Garamond !important; }
+
+h2 { color: rgb(168, 0, 0); font-size: 40px; text-align: left; margin-top: =
+50px; font-family: Garamond !important; }
+
+h3 { color: rgb(0, 0, 255); font-size: 30px; text-align: left; font-family:=
+ Garamond !important; }
+
+h4 { color: rgb(191, 0, 0); font-size: 27px; text-align: left; font-family:=
+ Garamond !important; }
+
+table { color: rgb(0, 0, 0); font-size: 24px; text-align: left; border-coll=
+apse: separate; border-spacing: 50px 0px; font-family: Garamond !important;=
+ }
+
+th { text-align: left; }
+
+p { overflow: hidden; width: 100%; margin-bottom: 0.375em; margin-top: 0.37=
+5em; }
+
+.collapsibleList li > input + * { display: none; }
+
+.collapsibleList li > input:checked + * { display: block; }
+
+.collapsibleList li > input { display: none; }
+
+.collapsibleList label { cursor: pointer; }
+------MultipartBoundary--3rXIJ82HEJIJdCmy9yW5FDYuUK1QQFQ07grJ8LL2Ts----
+Content-Type: text/html
+Content-ID: <frame-45FA7903E3AFFE8E3E859073AB61AA34@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2019/www/homeworks/topics.html
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dwindows-1252">
+<link href=3D"https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2=
+019/www/homeworks/formatting.css" rel=3D"stylesheet" type=3D"text/css">
+<title>11-785 Intro to DL</title>
+
+
+
+<!--ul class=3D"collapsibleList" style=3D"margin-top:100px;"-->
+</head><body><ul style=3D"margin-top:100px;">
+<li style=3D"color:#A80000;"><a href=3D"http://deeplearning.cs.cmu.edu/" ,=
+=3D"" target=3D"_top">Home</a></li>=20
+<li style=3D"color:#A80000;"><a href=3D"http://deeplearning.cs.cmu.edu/home=
+works/hw0" target=3D"_top">HW0</a></li>
+<li style=3D"color:#A80000;"><a href=3D"http://deeplearning.cs.cmu.edu/home=
+works/hw1/hw1p1.html" target=3D"_top">HW1-part1</a></li>
+<li style=3D"color:#A80000;"><a href=3D"http://deeplearning.cs.cmu.edu/home=
+works/hw1/hw1p2.html" target=3D"_top">HW1-part2</a></li>
+</ul>
+
+
+</body></html>
+------MultipartBoundary--3rXIJ82HEJIJdCmy9yW5FDYuUK1QQFQ07grJ8LL2Ts----
+Content-Type: text/html
+Content-ID: <frame-2DEDC3298262EC0DF9E076F94C409B15@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2019/www/homeworks/hw0/hw0description.html
+
+<html><!-------------- HEADER BEGINS ------------------><head><meta http-eq=
+uiv=3D"Content-Type" content=3D"text/html; charset=3Dwindows-1252">
+<link href=3D"https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2=
+019/www/homeworks/formatting.css" rel=3D"stylesheet" type=3D"text/css">
+<title>11-785 Homework 0</title>
+
+
+</head>
+<!-- Some Definitions --
+\(
+    \def\naturals{\mathbb{N}}
+    \def\integers{\mathbb{Z}}
+    \def\rationals{\mathbb{Q}}
+    \def\reals{\mathbb{R}}
+\)
+-- End Definitions -->
+
+<body><h2> Introduction </h2>
+<p>In this assignment you will be introduced to basic numpy functionality, =
+vectorization, and slicing/indexing. The goals of the assignment are as fol=
+lows:
+</p><ol>
+<li>Understand the advantages of vectorization using numpy;</li>
+<li>Learn basic and useful numpy functions;</li>
+<li>Most importantly, no more loops!</li>
+</ol>
+
+
+<p>You will be given a set of problems in this homework to test your basics=
+. You must finish all of them to get full points.
+
+</p><p>Although, this homework is worth only 1% of your final grade, it is =
+essential that you do it fully! This homework acts as an introduction to py=
+thon, if you can't solve this homework then you will be struggling with the=
+ coming assignments. Make sure you understand the concepts introduced here =
+and in recitation 0 to determine your initial level in the course.
+
+<table>
+  <tbody><tr>
+    <th> On time submission deadline:</th>
+    <td> 20 Jan 2019, 11:59:59 EDT.</td>=20
+  </tr>
+  <tr>
+    <th> Late submission deadline:</th>
+    <td> 31 Jan 2019, 11:59:59 EDT.</td>=20
+  </tr>
+  <tr>
+    <th>Expected time required for this homework:</th>
+    <td>Six hours. If you're quick, you can do it in under an hour.</td>=20
+  </tr>
+</tbody></table>
+</p><p>The late submission deadline is intended for late registrants to the=
+ course.
+
+
+</p><h2> Autograder submission </h2>
+<p>Your solutions will be autograded by Autolab. For this reason, it is imp=
+ortant that you do not change the signature of any of the functions contain=
+ed in the
+template.</p>
+<p>In order to submit your solution, create a tar file containing your code=
+. The
+root of the tar file should have a directory named hw0 containing your modu=
+le
+code.  </p>
+<p>Creating the tar could be done through using the tar command in the comm=
+and line. You can use this command to create the file,
+</p>
+<b>
+tar --create --file=3Dhandin.tar files_to_include ... <br>
+# --create: will create a new archive. <br>
+# --file: name of the archived tar file. <br>
+</b>
+<br>
+
+<p>You can also untar the handout using the following command in the comman=
+d line.
+<br>
+<b>
+tar --extract handout.tar <br>
+# --extract: extract files from an archive. <br>
+</b>
+<br>
+</p><p>For more information on using tar please refer to this website,
+https://www.computerhope.com/unix/utar.htm .
+
+</p><h2> Vectorization </h2>
+
+<p>In this problem you will be given snippets of code. The snippets will be=
+ functions that you will be introduced to through out the course and famous=
+ functions you might use in basic machine learning algorithms. These functi=
+ons will not be vectorized.
+</p><p>Your task is to vectorize the functions. That is, you have to replac=
+e the loop with numpy functions while maintaining its functionality.
+
+</p><ol>
+<li> <b><i>vectorize_sumproducts</i></b>: Takes two 1-dimensional arrays an=
+d sums the
+products of all the pairs. </li>
+<li> <b><i>vectorize_Relu</i></b>: Takes one 2-dimensional array and apply =
+the relu function
+on all the values of the array. </li>
+<li><b><i>vectorize_PrimeRelu</i></b>: Takes one 2-dimensional array and ap=
+ply the derivative of relu function on all the values of the array. </li>
+</ol>
+
+<h2> Variable Length </h2>
+<p>In this problem you will be given a variable length synthetic dataset. Y=
+ou will be given two different types of data, uni-variate time-series data =
+and multivariate time-series data.
+
+</p><p>Univariate time-series data will look something like this $(N, -)$ w=
+here $N$ is the number of instances and $-$ is the variable depending on th=
+e length of each instance.
+
+</p><p>Multivariate time-series data will look something like $(N, -, F)$ w=
+here $N$ is the number of instances, - is the variable depending on the len=
+gth of each instance and $F$ is the dimension of the features of an instanc=
+e.
+
+</p><p>Your task will revolve around processing the data so that time-serie=
+s arrays
+have the same length. You can use loops in this part.
+
+</p><h3> Slicing </h3>
+<p>In this part of the problem you are required to slice the data to smalle=
+r lengths.  That is, you will be chopping part of an instance to make all t=
+he instances in the dataset of the same length. To do that you have multipl=
+e options as to how to chop the dataset:
+
+</p><ol>
+<li> <b><i>slice_fixed_point </i></b>: Takes one 3-dimensional array with t=
+he starting position and the length of the output instances. Your task is t=
+o slice the instances from the same starting position for the given length.=
+ </li>
+<li> <b><i>slice_last_point </i></b>: Takes one 3-dimensional array with th=
+e length of the output instances. Your task is to keeping only the l last p=
+oints for each instances in the dataset. </li>
+<li> <b><i> slice_random_point </i></b>: Takes one 3-dimensional array with=
+ the length of the output instances. Your task is to slice the instances fr=
+om a random point in each of the utterances with the given length. <font co=
+lor=3D"red">Please use function <b>numpy.random.randint</b> for generating =
+the starting point.</font></li>
+</ol>
+
+<p>Note that no matter what method you use you need to make sure that the l=
+ength you choose to reduce the sizes to is larger than or equal to the size=
+ of any
+instance in the dataset. In this problem we give you the correct length tha=
+t is
+possible to achieve for all the utterances in the dataset.
+
+</p><p>Here are some examples of how the functions should behave like . The=
+ examples are 2-dimensional arrays. You should implement methods for 3-dime=
+nsional
+arrays.
+<br>
+<!--pre>
+data =3D [
+[u0l0, u0l1, u0l2, u0l3, u0l4],
+[u1l0, u1l1, u1l2, u1l3],
+[u2l0, u2l1, u2l2, u2l3, u2l4, u2l5],
+[u3l0, u3l1, u3l2, u3l3, u3l4]
+]
+</pre-->
+</p><div class=3D"box">
+
+data =3D [ <br>
+
+[u0l0, u0l1, u0l2, u0l3, u0l4], <br>
+=20
+[u1l0, u1l1, u1l2, u1l3], <br>
+=20
+[u2l0, u2l1, u2l2, u2l3, u2l4, u2l5], <br>
+=20
+[u3l0, u3l1, u3l2, u3l3, u3l4] <br>
+=20
+] <br>
+=20
+ </div>
+<p> # For any (uXlY) in data, X stands for the index of the utterance and Y=
+ stands for the index of the feature in the feature vector of the utterance=
+ X.=20
+  <br>
+ </p><div class=3D"box">
+result_slice_fixed_point =3D slice_fixed_point(data, 2, 1) <br>
+=20
+&gt;&gt;&gt;&gt; print(result_slice_fixed_point) <br>
+=20
+&gt;&gt;&gt;&gt; <br>
+=20
+[[u0l1, u0l2], <br>
+=20
+[u1l1, u1l2], <br>
+=20
+[u2l1, u2l2], <br>
+=20
+[u3l1, u3l2]] <br>
+=20
+result_slice_last_point =3D slice_last_point(data, 3) <br>
+=20
+&gt;&gt;&gt;&gt; print(result_slice_last_point) <br>
+=20
+&gt;&gt;&gt;&gt; <br>
+=20
+[[u0l2, u0l3, u0l4], <br>
+=20
+[u1l1, u1l2, u1l3], <br>
+=20
+[u2l3, u2l4, u2l5], <br>
+=20
+[u3l2, u3l3, u3l4]] <br>
+=20
+</div>
+
+<p>Note that we cannot give you an example for random point because for eac=
+h utterance there will be a different starting position of each utterance.
+
+</p><h3> Padding </h3>
+<p>In this part of the problem you are required to pad the data to a larger=
+/same lengths. That is you will be adding values to an instance to make all=
+ the instances in the dataset of the same length. To do that you have multi=
+ple options:
+</p><ol>
+<li> <b><i> pad_pattern_end</i></b>: Takes one 3-dimensional array. Your ta=
+sk is to pad the instances from the end position as shown in the example be=
+low. That is, you need to pad the reflection of the utterance mirrored alon=
+g the edge of
+the array. </li>
+<li> <b><i> pad_constant_central</i></b>: Takes one 3-dimensional array wit=
+h the constant value of padding. Your task is to pad the instances with the=
+ given constant value while maintaining the array at the center of the padd=
+ing. </li>
+</ol>
+<p>Here are some examples of how the functions should behave like=20
+</p><p>
+ </p><div class=3D"box">
+data =3D [
+[u0l0, u0l1, u0l2, u0l3, u0l4], <br>
+
+&nbsp;&nbsp;[u1l0, u1l1, u1l2, u1l3], <br>
+
+&nbsp;&nbsp;[u2l0, u2l1, u2l2, u2l3, u2l4, u2l5], <br>
+
+&nbsp;&nbsp;[u3l0, u3l1] <br>
+
+&nbsp;&nbsp;] <br>
+</div>
+<br>
+<p># For any (uXlY) in data, X stands for the index of the utterance and Y =
+stands for the index of the feature in the feature vector of the utterance =
+X.=20
+</p><p>
+</p><div class=3D"box">
+result_pad_pattern_end =3D pad_pattern_end(data) <br>
+
+&gt;&gt;&gt;&gt; print(result_pad_pattern_end) <br>
+
+&gt;&gt;&gt;&gt; <br>
+
+[[u0l0, u0l1, u0l2, u0l3, u0l4, u0l4], <br>
+
+[u1l0, u1l1, u1l2, u1l3, u1l3, u1l2], <br>
+
+[u2l0, u2l1, u2l2, u2l3, u2l4, u2l5], <br>
+
+[u3l0, u3l1, u3l1, u3l0, u3l0, u3l1]] <br>
+
+result_pad_constant_central =3D pad_constant_central(data, cval) <br>
+
+&gt;&gt;&gt;&gt; print(result_pad_constant_central) <br>
+
+&gt;&gt;&gt;&gt; <br>
+
+[[u0l0, u0l1, u0l2, u0l3, u0l4, cval], <br>
+
+[cval, u1l0, u1l1, u1l2, u1l3, cval], <br>
+
+[u2l0, u2l1, u2l2, u2l3, u2l4, u2l5], <br>
+
+[cval, cval, u3l0, u3l1, cval, cval]] <br>
+
+</div>
+
+<h2> PyTorch </h2>
+<p>PyTorch is an open-source deep learning library for python, and will be =
+the
+primary framework throughout the course. You can install PyTorch referring =
+to
+https://PyTorch.org/get-started/locally/.=20
+
+</p><p>One of the fundamental concepts in PyTorch is the Tensor, a multi-di=
+mensional matrix containing elements of a single type. Tensors are similar =
+to numpy nd-arrays and tensors support most of the functionality that numpy=
+ matrices do.
+
+</p><p>In following exercises, you will familiarize yourself with tensors a=
+nd more
+importantly, the PyTorch documentation. It is important to note that for th=
+is
+section we are simply using PyTorch's tensors as a matrix library, just lik=
+e
+numpy. So please do not use functions in torch.nn, like torch.nn.ReLU.
+
+</p><h3> Numpy and PyTorch Conversion </h3>
+<p>In PyTorch, it is very simple to convert between numpy arrays and tensor=
+s.
+PyTorch's tensor library provides functions to perform the conversion in ei=
+ther
+direction. In this task, you are to write 2 functions:
+</p><ol>
+<li> <b><i>numpy2tensor </i></b>: Takes a numpy nd-array and converts it to=
+ a PyTorch tensor. Function torch.tensor is one of the simple ways to imple=
+ment it but please do not use it this time. The PyTorch environment install=
+ed on
+Autolab is not an up-to-date version and does not support this function.  <=
+/li>
+<li> <b><i>tensor2numpy </i></b>: Takes a PyTorch tensor and converts it to=
+ a numpy ndarray. </li>
+</ol>
+
+<h3>Tensor Sum-Products </h3>
+<p>In this task, you are to implement the function tensor sumproducts that =
+takes
+two tensors as input, and returns the sum of the element-wise products of t=
+he
+two tensors.
+
+</p><h3>Tensor ReLU and ReLU Prime </h3>
+<p>In this task, you are to implement the ReLU and ReLU Prime function for
+PyTorch Tensors.
+</p><ol>
+<li> <b><i>tensor_ReLU </i></b>: Takes a tensor and applies the ReLU functi=
+on on all elements. </li>
+<li> <b><i>tensor_ReLU_prime </i></b>: Takes a tensor and applies the deriv=
+ative of the ReLU function on all elements. </li>
+</ol>
+
+
+</body></html>
+------MultipartBoundary--3rXIJ82HEJIJdCmy9yW5FDYuUK1QQFQ07grJ8LL2Ts------

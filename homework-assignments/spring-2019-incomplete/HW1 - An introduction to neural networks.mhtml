@@ -1,0 +1,531 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2019/www/homeworks/hw1/hw1p1.html
+Subject: 11-785 Introduction to Deep Learning
+Date: Fri, 31 Jan 2020 15:52:45 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--288rX2rBpO0qefX0ZmI0XZB6FfNVlSJmzt3LV4rOqr----"
+
+
+------MultipartBoundary--288rX2rBpO0qefX0ZmI0XZB6FfNVlSJmzt3LV4rOqr----
+Content-Type: text/html
+Content-ID: <frame-FA5EDCBC24F06DD698D7BDDF109F5154@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2019/www/homeworks/hw1/hw1p1.html
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3Dwindows-1252">
+<title>11-785 Introduction to Deep Learning</title>
+</head>
+<frameset rows=3D"150,*" frameborder=3D"0">
+   <frame name=3D"top" src=3D"cid:frame-4B54C11BBAB56976ABA2EA7F92390B58@mh=
+tml.blink">
+   <frameset cols=3D"250,*" frameborder=3D"0">
+       <frame name=3D"topics" src=3D"cid:frame-B99AFB4D87DB5C2C8613C37E4B60=
+F6E3@mhtml.blink">
+       <frame name=3D"mainbox" src=3D"cid:frame-97D516B99AD4451D8C12ADFCF79=
+86D47@mhtml.blink">
+   </frameset>
+   <noframes>
+   <body vlink=3D"#A80000" alink=3D"#A80000">
+      Your browser does not support frames.
+   </body>
+   </noframes>
+</frameset>
+</html>
+------MultipartBoundary--288rX2rBpO0qefX0ZmI0XZB6FfNVlSJmzt3LV4rOqr----
+Content-Type: text/html
+Content-ID: <frame-4B54C11BBAB56976ABA2EA7F92390B58@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2019/www/homeworks/hw1/hw1header.html
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dwindows-1252">
+<link href=3D"https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2=
+019/www/homeworks/formatting.css" rel=3D"stylesheet" type=3D"text/css">
+<title>11-785 Introduction to Deep Learning</title>
+</head>
+
+<body><h1 style=3D"margin-top: 50px;"> Homework 1: An Introduction to Neura=
+l Networks
+</h1>
+
+
+</body></html>
+------MultipartBoundary--288rX2rBpO0qefX0ZmI0XZB6FfNVlSJmzt3LV4rOqr----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2019/www/homeworks/formatting.css
+
+@charset "windows-1252";
+
+.figure { color: black; background-color: white; text-align: center; font-s=
+ize: 21px; border: 0px; font-family: calibri !important; }
+
+.box { color: black; background-color: rgb(193, 255, 51); text-align: left;=
+ font-size: 21px; border: 1px solid green; font-family: calibri !important;=
+ }
+
+.box h4 { color: rgb(191, 0, 0); font-size: 27px; text-align: left; margin-=
+top: 15px; font-family: Garamond !important; }
+
+body { color: rgb(0, 0, 0); font-size: 24px; text-align: left; font-family:=
+ Garamond !important; }
+
+a { }
+
+h1 { color: rgb(168, 0, 0); font-size: 60px; text-align: center; font-famil=
+y: Garamond !important; }
+
+h2 { color: rgb(168, 0, 0); font-size: 40px; text-align: left; margin-top: =
+50px; font-family: Garamond !important; }
+
+h3 { color: rgb(0, 0, 255); font-size: 30px; text-align: left; font-family:=
+ Garamond !important; }
+
+h4 { color: rgb(191, 0, 0); font-size: 27px; text-align: left; font-family:=
+ Garamond !important; }
+
+table { color: rgb(0, 0, 0); font-size: 24px; text-align: left; border-coll=
+apse: separate; border-spacing: 50px 0px; font-family: Garamond !important;=
+ }
+
+th { text-align: left; }
+
+p { overflow: hidden; width: 100%; margin-bottom: 0.375em; margin-top: 0.37=
+5em; }
+
+.collapsibleList li > input + * { display: none; }
+
+.collapsibleList li > input:checked + * { display: block; }
+
+.collapsibleList li > input { display: none; }
+
+.collapsibleList label { cursor: pointer; }
+------MultipartBoundary--288rX2rBpO0qefX0ZmI0XZB6FfNVlSJmzt3LV4rOqr----
+Content-Type: text/html
+Content-ID: <frame-B99AFB4D87DB5C2C8613C37E4B60F6E3@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2019/www/homeworks/topics.html
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dwindows-1252">
+<link href=3D"https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2=
+019/www/homeworks/formatting.css" rel=3D"stylesheet" type=3D"text/css">
+<title>11-785 Intro to DL</title>
+
+
+
+<!--ul class=3D"collapsibleList" style=3D"margin-top:100px;"-->
+</head><body><ul style=3D"margin-top:100px;">
+<li style=3D"color:#A80000;"><a href=3D"http://deeplearning.cs.cmu.edu/" ,=
+=3D"" target=3D"_top">Home</a></li>=20
+<li style=3D"color:#A80000;"><a href=3D"http://deeplearning.cs.cmu.edu/home=
+works/hw0" target=3D"_top">HW0</a></li>
+<li style=3D"color:#A80000;"><a href=3D"http://deeplearning.cs.cmu.edu/home=
+works/hw1/hw1p1.html" target=3D"_top">HW1-part1</a></li>
+<li style=3D"color:#A80000;"><a href=3D"http://deeplearning.cs.cmu.edu/home=
+works/hw1/hw1p2.html" target=3D"_top">HW1-part2</a></li>
+</ul>
+
+
+</body></html>
+------MultipartBoundary--288rX2rBpO0qefX0ZmI0XZB6FfNVlSJmzt3LV4rOqr----
+Content-Type: text/html
+Content-ID: <frame-97D516B99AD4451D8C12ADFCF7986D47@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2019/www/homeworks/hw1/hw1p1description.html
+
+<html><!-------------- HEADER BEGINS ------------------><head><meta http-eq=
+uiv=3D"Content-Type" content=3D"text/html; charset=3Dwindows-1252">
+<link href=3D"https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2=
+019/www/homeworks/formatting.css" rel=3D"stylesheet" type=3D"text/css">
+<title>11-785 Homework 1</title>
+
+
+</head>
+
+<body><h2> Neural Networks </h2>
+<p>
+For part 1 of the homework you will write your own implementation of the ba=
+ckpropagation algorithm for
+training your own neural network, as well as a few other features such as a=
+ctivations and batch-normalization.
+You are required to do this assignment in the Python (Python version 3) pro=
+gramming language. Do not
+use any autodiff toolboxes (PyTorch, TensorFlow, Keras, etc) - you are only=
+ permitted and recommended
+to vectorize your computation using the Numpy library.
+</p>
+<p>
+In the file hw1.py we provide you with classes whose methods you have to fi=
+ll. The autograder tests will
+compare the outputs of your methods and attributes of your classes with a r=
+eference solution. Therefore
+we enforce for a large part the design of your code ; however, you still ha=
+ve a lot of freedom in your
+implementation . We recommend that you look through all of the problems bef=
+ore attempting the first
+problem. However we do recommend you complete the problems in order as the =
+difficulty increases, and
+questions often rely on the completion of previous questions.
+</p>
+
+<!-- <p>
+For part 1 of the homework you will write your own implementation of the ba=
+ck-propagation algorithm for training your own neural network.  You are req=
+uired to do this assignment in the Python (Python version3) programming lan=
+guage.  Do not use any autodiff toolboxes (PyTorch, TensorFlow, Keras, etc)=
+ - you are only permitted and recommended to vectorize your computation usi=
+ng the Numpy library.The goal of this assignment is to classify images of h=
+andwritten digits (10 classes).  The images are 28=C3=9728 insize represent=
+ed as a vector of dimension 784 by listing all the pixel values in raster s=
+can order.  There are 50,000 members of the training set, 10,000 members of=
+ the validation set, and 10,000 members of the test set.  This dataset is b=
+alanced.  You can find the dataset on Kaggle in the form of 6 files, 2 for =
+each data set partition.  Each file can be loaded with the numpy.load metho=
+d.
+</p>
+<ol>
+<li>traindata.npy</li>
+<li>trainlabels.npy</li>
+<li>valdata.npy</li>
+<li>vallabels.npy</li>
+<li>testdata.npy</li>
+<li>testlabels.npy</li>
+</ol>
+
+<p>
+	Skeleton code is provided to help organize your code.  Follow the inline n=
+otes and hints to help you with your implementation.  The autograder will r=
+un your code against the same dataset hosted on Autolab.The way you choose =
+to design your code for this homework will affect how much time you spend c=
+oding.  We recommend that you look through all of the problems before attem=
+pting the first problem.  However we do recommend you complete the problems=
+ in order as the difficulty increases.
+</p> -->
+
+<h2> Activations</h2>
+<p>
+A number of activation classes including Sigmoid, Tanh and ReLU must be imp=
+lemented. Each of these
+come in the form of a class which has both a forward and derivative methods=
+ that must be implemented. The
+Identity activation has been implemented for you as an example. All of thes=
+e classes derive from Activation
+which acts as an abstract base class / interface.
+</p>
+<p>
+You only need to implement the two methods for each class. No helper functi=
+ons or additional classes should
+be necessary. Keep your code as concise as possible and leverage Numpy as m=
+uch as possible.
+Be mindful that you are working with matrices which have a given shape as w=
+ell as a set of values.
+</p>
+
+<h2> Softmax Cross Entropy </h2>
+<p>
+For this homework, we will be using the softmax cross entropy loss detailed=
+ in the appendix of this writeup. Use the LogSumExptrick to ensure numerica=
+l stability. Implement the methods specified in the class definitionSoftmax=
+CrossEntropy. This class inherits the baseCriterionclass.Again no helper me=
+thods should be needed and you should stride to keep your code as simple as=
+ possible. Use 1e-8 for eps.
+</p>
+
+<h3> SoftmaxCrossEntropy.forward </h3>
+<p>
+	Implement the softmax cross entropy operation on a batch of output vectors=
+.Hint:Add a class attribute to keep track of intermediate values necessary =
+for the backward computation.
+	</p><ol>
+		<li>Input shapes:
+			<ol><li>x:  (batch size, 10)</li>
+				<li>y:  (batch size, 10)</li>
+			</ol>
+		</li>
+		<li>Output Shape:
+			<ol><li>out:  (batch size,)</li>
+			</ol>
+		</li>
+	</ol>
+<p></p>
+<h3>SoftmaxCrossEntropy.backward</h3>
+<p>Perform  the  'backward'  pass  of  softmax  cross  entropy  operation  =
+using  intermediate  values  saved  in  theforward pass.
+	</p><ol>
+		<li>Output shapes:
+			<ol><li>out:  (batch size, 10)</li>
+			</ol>
+		</li>
+	</ol>
+<p></p>
+
+
+<h2>Multi-Layer Perceptron (MLP)</h2>
+<p>
+In this section of the homework, you will be implementing a Multi-Layer Per=
+ceptron with an API similar to
+popular Automatic Differentiation Libraries like PyTorch, which you will be=
+ allowed and encouraged to use
+in the second part of the homework.
+Provided in hw1.py is a template the MLP class.
+Go through the functions of the given MLP class thoroughly and make sure yo=
+u understand what each
+function in the class does so that you can create a generic implementation =
+that supports an arbitrary
+number of layers, types of activations and network sizes.
+This section is purely descriptive and for reference as you tackle the next=
+ problems. Nothing to implement...
+yet.
+</p>
+<p>
+	The parameters for theMLPclass are:
+	</p><ol>=20
+		<li>input size:  The size of each individual data example.</li>
+		<li>output size:  The number of outputs.</li>
+		<li>hiddens:  A list with the number of units in each hidden layer.</li>
+		<li>activations:  A list ofActivationobjects for each layer.</li>
+		<li>weight_init_fn:  A function applied to each weight matrix before trai=
+ning.</li>
+		<li>bias_init_fn:  A function applied to each bias vector before training=
+.</li>
+		<li>criterion:  ACriterionobject to compute the loss and its derivative.<=
+/li>
+		<li>lr:  The learning rate.</li>
+		<li>momentum:  Momentum scale (Should be 0.0 until completing 3.6).</li>
+		<li>num_bn_layers:  Number ofBatchNormlayers start from upstream (Should =
+be 0 until completing 3.5).</li>
+	</ol>
+<p></p>
+<p>
+
+	The attributes of the MLP class are:=09
+	</p><ol>
+		<li>@W: The list of weight matrices.</li>
+		<li>@dW: The list of weight matrix gradients.</li>
+		<li>@b:  A list of bias vectors.</li>
+		<li>@db:  A list of bias vector gradients.</li>
+		<li>@bnlayers:  A list ofBatchNormobjects.  (Should beNoneuntil completin=
+g 3.5).</li>
+	</ol>
+<p></p>
+<p>
+	The methods of the MLP class are:
+	</p><ol>
+		<li>forward:  Forward pass.  Accepts a mini-batch of data and return a ba=
+tch of output activations.</li>
+		<li>backward:  Backward pass.  Accepts ground truth labels and computes g=
+radients for all parameters.
+			<br>Hint:  Use state stored in activations during forward pass to simpli=
+fy your code.</li>
+		<li>zerograds:  Set all gradient terms to 0.</li>
+		<li>step:  Apply gradients computed in backward to the parameters.</li>
+		<li>train(Already implemented):  Set the mode of the network to train.</l=
+i>
+		<li>eval(Already implemented):  Set the mode of the network to evaluation=
+.</li>
+	</ol>
+<p></p>
+<p>
+	</p><p>
+Note:  MLP methods train and eval will be useful in 3.5.
+</p>
+<p>
+Note:   Pay  attention  to  the  data  structures  being  passed  into  the=
+  constructor and the  class  attributes specified initially.
+</p>
+<p>
+Sample constructor call: MLP(784, 10, [64, 64, 32], [Sigmoid(), Sigmoid(), =
+Sigmoid(), Identity()],weight_init_fn, bias_init_fn, SoftmaxCrossEntropy(),=
+ 0.008, momentum=3D0.9, num_bn_layers=3D0)
+</p>
+<p></p>
+
+<h3>Weight Initialization </h3>
+<p>
+	Good initialization has been shown to make a great difference in the train=
+ing process.  Implement two basic parameter initialization functions
+	</p><ol>
+		<li>random_normal_weight_init:  Accepts two ints specifying the number of=
+ inputs and units.  Returns an  appropriately shaped ndarray with  each  en=
+try  initialized  with  an  independent  sample  from  the standard normal =
+distribution.</li>
+		<li>zeros_bias_init:  Accepts  the  number  of  bias  units  and  returns=
+  an  appropriately  shaped ndarray with each entry initialized to zero.</l=
+i>
+	</ol>
+<p></p>
+<h3>Linear Classifier </h3>=20
+<p>
+Implement a linear classifier (MLP with no hidden layers) using theMLPclass=
+.  We suggest you read through the entire assignment before you start imple=
+menting this part.For this problem, you will have to fill in the parts of t=
+he MLP class and pass the following parameters:
+	</p><ol>
+		<li>input_size:  The size of each individual data example.</li>
+		<li>output_size:  The number of outputs.</li>
+		<li>hiddens:  An empty list because there are no hidden layers.</li>
+		<li>activations:  A singleIdentityactivation.</li>
+		<li>weight_init_fn:  Function name of a weight initializer function you w=
+ill write for local testing and will be passed to you by the autograder.</l=
+i>
+		<li>bias_init_fn:  Function name of a bias initializer function you will =
+write for local testing and will be passed to you by the autograder.</li>
+		<lic>riterion:SoftmaxCrossEntropyobject.
+	</lic></ol>
+<p></p>
+<p>
+		Consider that a linear transformation with an identity activation is simp=
+ly a linear model.
+</p>
+<p>
+		You will have to implement the forward and backward function of theMLPcla=
+ss so that it can at least work as a linear classifier.  All parameters sho=
+uld be maintained as class attributes originally specified in the original =
+handout code (e.g.self.W,self.b).
+</p>
+<p>
+		The step function also needs to implemented, as it will be invoked after =
+every backward pass to update the parameters of the network (the gradient d=
+escent algorithm).After all parts are filled,  train the model for 100 epoc=
+hs with a batch size of 100 and try visualizing the training curves using t=
+he utilities provided in test.py.
+</p>
+
+<h3>Non-Linearities</h3>
+<p>
+ Linear models are cool, but we are here to build neural networks.
+ </p>
+ <p>
+ Implement all of the non-linearities specified in hw1.py. A sample impleme=
+ntation of theIdentityactivationis provided for reference.
+</p>
+<p>
+ The output of the activation should be stored in the self.state variable o=
+f the class.  The self.state variable  should  be  further  used  for  calc=
+ulating  the  derivative  during  the  backward  pass.   These  are  the fo=
+llowing list of classes for which you would have to implement the forward a=
+nd derivative function.  The autograder will test these implementations ind=
+ividually.
+ </p><ol>
+ 	<li>Sigmoid </li>
+ 	<li>Hyperbolic Tangent (Tanh)</li>
+ 	<li>Rectified Linear unit (ReLU) </li>
+ </ol>
+<p></p>
+
+<h3>Hidden Layers</h3>
+<p>
+	Update the MLP class that previously just supported a single fully connect=
+ed layer (a linear model) such thatit can now support an arbitrary number h=
+idden layers, each with an arbitrary number of units.
+</p>
+<p>
+	Specifically, the hiddens argument of theMLPclass will no longer be assume=
+d to be an empty list and can be of arbitrary length (arbitrary number of l=
+ayers) and contain arbitrary positive integers (arbitrary number of units i=
+n each layer). The implementation should apply the Activation objects, pass=
+ed as activations, to their respective layers. For example, activations[0] =
+should be applied to the activity of the first hidden layer.While at risk o=
+f being pedantic, here is a clarification of the expected arguments to be p=
+assed to the MLP constructor  once  it  can  support  arbitrary  numbers  o=
+f  layers  with  an  arbitrary  assortment  of  activation functions.
+</p>
+
+<ol>
+	<li>input_size:  The size of each individual data example.</li>
+	<li>output_size:  The number of outputs.</li>
+	<li>hiddens:  A list of layer sizes (number of units per layer).</li>
+	<li>activations:  A list ofActivationobjects to be applied after each line=
+ar transformation respectively.</li>
+	<li>weight_init_fn:  Function name of a weight initializer function you wi=
+ll write for local testing and will be passed to you by the autograder.</li=
+>
+	<li>bias_init_fn:  Function name of a bias initializer function you will w=
+rite for local testing and will be passed to you by the autograder.</li>
+	<li>criterion:SoftmaxCrossEntropyobject.</li>
+</ol>
+
+<h3> Batch Normalization (BatchNorm) </h3>
+	<p>In this problem you will implement the Batch Normalization technique fr=
+om Ioffe and Szegedy [2015].  Implement theBatchNormclass and make sure tha=
+t all provided class attributes are set correctly.  Apply theBatchNorm tran=
+sformation of the first num_bn_layers specified as an argument to MLP. For =
+the sake of the autograder tests, you can assume that batch norm will be ap=
+plied to networks with sigmoid non-linearities.
+</p>
+
+<h3>Momentum </h3>
+<p>
+	Modify  the  step  function  present  in  the  MLP  class  to  include  mo=
+mentum  in  your  gradient  descent.   The momentum value will be passed as=
+ a parameter.  Your function should perform epoch number of epochs and retu=
+rn the resulting weights.  Instead of calling the step function after compl=
+eting your backward pass, you would have to call the momentum function to u=
+pdate the parameters.  Also, remember to invoke the zerograd function after=
+ each batch.  </p>
+	<p>
+	Note:Please ensure that you shuffle the training set after each epoch by u=
+sing np.random.shuffle and generate a list of indices and performing a gath=
+er operation on the data using these indices.
+	</p>
+
+<h3>Training Statistics </h3>
+<p>
+	In  this  problem  you  will  be  passed  the  MNIST  data  set  (provided=
+  as  a  3-tuple  of{trainset,valset,testset}, each in the same format desc=
+ribed in 1), and a series of network and training parameters. </p>
+	<ol>
+		<li>training_losses:  A Numpy ndarray containing the average training los=
+s for each epoch.</li>
+		<li>training_errors:  A Numpy ndarray containing the classification error=
+ on the training set at each epoch  (Hint:You  should  not  be evaluating  =
+performance  on  the  training  set  after  each  epoch,  but compute an ap=
+proximation of the training classification error for each training batch). =
+</li>
+		<li>validation_losses:  A Numpy ndarray containing the average validation=
+ loss loss for each epoch. </li>
+		<li>validation_errors:  A Numpy ndarray containing the classification err=
+or on the validation set after each epoch. </li>
+		<!-- <li> confusion_matrix:  A (10=C3=9710) Numpy ndarray confusion matri=
+x over the test set. Rows correspond to the predicted class and columns cor=
+respond to the ground truth class. </li> -->
+	</ol>
+
+<p>
+Fill the function get training stats that, given a network, a dataset, a nu=
+mber of epochs and a batch size,
+trains the network and returns those quantities. Then execute the provided =
+test file, that will run get training stats
+on MNIST for a given network and plot the previous arrays into files. Hand-=
+in those image files along with
+your code on autolab.
+</p>
+<p>
+Note: You will not be autograded on that part. Instead we will grade you ma=
+nually by looking at your code
+and plots. We will check that your code and the statistics you obtain make =
+sense. Contrary to the other
+questions, we do not require an exact match with the solution, only that yo=
+u run your forward, backward
+and step functions in the right order, and use the partitions of the datase=
+t correctly (train and val at least),
+with shuffling of the training set between epochs.
+</p>
+<p>
+Note: We provide examples of the plots that you should obtain. If you get s=
+imilar or better values at the
+end of the training (loss around 0.3, error around 0.1), then you are very =
+likely to get all the points. If you
+are a bit above but that the errors and losses still drop significantly dur=
+ing training, it=E2=80=99s possible that you
+get all the points as well.
+</p>
+
+
+
+</body></html>
+------MultipartBoundary--288rX2rBpO0qefX0ZmI0XZB6FfNVlSJmzt3LV4rOqr------

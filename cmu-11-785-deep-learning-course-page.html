@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title>11-785 Deep Learning</title>
+    <link href="./cmu-11-785-deep-learning-course-page_files/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link href="./cmu-11-785-deep-learning-course-page_files/css" rel="stylesheet" type="text/css">
+    <link href="./cmu-11-785-deep-learning-course-page_files/11785.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container titlebar">
+        <div class="row">
+            <!--div class="titlebar-img title-col vcenter">
+                <img id="logo" src="./img/brain.png">
+            </div-->
+            <div class="title-col vcenter" style="color:#A80000;font-weight:bold;text-align:center;width:100%">
+                <div class="title"><b>11-785</b> Introduction to Deep Learning</div>
+                <div class="subtitle"><i>Spring 2019</i></div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" container">
+        <div class="row">
+            <p style="margin-top:75px;">
+</p><hr>
+                <a href="https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Fall.2019/www/">FALL 19 Webpage</a><br><br>
+<p><font color="red"> <b>Information to fall students:</b></font> There have been questions about the comparison of 11-785 to 10-617, also named “Introduction to deep learning.” The two are <i>not the same course</i>. The conflicting names were an error, and based on content, 10-617/417 is now being renamed “Intermediate DL”. Ruslan and I recommend that students without significant prior experience of DL first take 785/485; on the other hand if you have prior experience and are looking for more of the theoretical background, you take 617. Taking 785 followed by 617 would, in fact, be a natural progression of courses in a curriculum.
+</p><hr>
+<p>“Deep Learning” systems, typified by deep neural networks, are increasingly taking over all AI tasks, ranging from language understanding, and speech and image recognition, to machine translation, planning, and even game playing and autonomous driving. As a result, expertise in deep learning is fast changing from an esoteric desirable to a mandatory prerequisite in many advanced academic settings, and a large advantage in the industrial job market.
+            </p>
+            <p> In this course we will learn about the basics of deep neural networks, and their applications to various AI tasks. By the end of the course, it is expected that students will have significant familiarity with the subject, and be able to apply Deep Learning to a variety of tasks. They will also be positioned to understand much of the current literature on the topic and extend their knowledge through further study.</p>
+<h3> You don't have to be a CMU student to follow the course</h3>
+<p> Petr Ermakov and Artem Trunov are <a href="http://dlcourse.ru/">mirroring the course</a> at OpenDataScience (<a href="http://ods.ai/">ODS.ai</a>). The mirrored course follows the CMU course in its entirety, quizzes, homeworks, piazza, discussion boards and all, and runs roughtly 3 weeks behind the CMU schedule. . There are currently about 1300 students signed up for it. If you are interested in the full course experience, you too can sign up for it at <a href="http://dlcourse.ru/">this site</a>.  
+
+</p><p>If you are only interested in the lectures, you can watch them on the YouTube channel listed below.
+            </p><h3>Course description from student point of view</h3>
+            <p>The course is well rounded in terms of concepts. It helps us understand the fundamentals of Deep Learning. The course starts off gradually with MLPs and it progresses into the more complicated concepts such as attention and sequence-to-sequence models. We get a complete hands on with PyTorch which is very important to implement Deep Learning models. As a student, you will learn the tools required for building Deep Learning models. The homeworks usually have 2 components which is Autolab and Kaggle. The Kaggle components allow us to explore multiple architectures and understand how to fine-tune and continuously improve models. The task for all the homeworks were similar and it was interesting to learn how the same task can be solved using multiple Deep Learning approaches. Overall, at the end of this course you will be confident enough to build and tune Deep Learning models.</p>
+
+            <h4><a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/feedback.html" target="_blank">Click here to read what students say about the previous edition of the course</a></h4>
+            <p><b style="color:#A80000;">Instructor:</b> Bhiksha Raj</p>
+            <ul style="margin-top:-10px;">
+                <li>bhiksha@cs.cmu.edu</li>
+            </ul>
+            <p>
+                <b style="color:#A80000;">TAs:</b>
+                </p><ul>
+                    <li> Alex Litzenberger : alitzenb@andrew </li>
+                    <li> Chia-wei Chang:  chiaweic@andrew
+                    </li><li> Cody Smith : codys@andrew </li>
+                    <li> David Bick  : dbick@andrew </li>
+                    <li> Hengrui Liu : hengrui2@andrew </li>
+                    <li> Hira Dhamyal : hyd@andrew </li>
+                    <li> Jakob Cassiman :  jcassima@andrew </li>
+                    <li> Josh Movenzadeh :   jmoavenz@andrew </li>
+                    <li> Kai Hu : kaihu@andrew </li>
+                    <li> Mir Mohammed Daanish Ali Khan :   malikhan@andrew </li>
+                    <li> Oluawefmi Azeez :  oazeez@andrew </li>
+                    <li> Raphael Olivier : rolivier@andrew </li>
+                    <li> Sarveshwaran Dhanasekar :   sarveshd@andrew </li>
+                    <li> Shaden Shaar :  sshaar@andrew </li>
+                    <li> Simral Chaudhary :  simralc@andrew </li>
+                    <li> William Hu : haoqih@andrew </li>
+
+                </ul>
+                <p style="font-size: 12px;">* -- contingent on registration</p>
+            <p><b style="color:#A80000;">Lecture:</b> Monday and Wednesday, 9.00am-10.20am</p>
+            <p><b style="color:#A80000;">Location:</b> Baker Hall A51</p>
+            <p><b style="color:#A80000;">Recitation:</b> Friday, 9.00am-10.20am
+            </p><p><b style="color:#A80000;">Location:</b> Baker Hall A51</p>
+            <p>
+                <b style="color:#A80000;">Office hours:</b>
+                </p><ul>
+                    <li> <b>Alex Litzenberger: </b> Tuesday 09:00-10:00 (GHC 5417),  Thursday 09:00-10:00 (GHC 5417)</li>
+                    <li> <b>Chia-Wei Chang(SV): </b> Friday 04:00-06:00</li>
+                    <li> <b>Cody Smith (SV): </b> Monday 01:30-03:30</li>
+                    <li> <b>David Bick: </b>Monday 01:00-02:00 (GHC 6404), Wednesday 01:00-02:00 (GHC 5417)</li>
+                    <li> <b>Hengrui Liu (SV): </b>Friday 03:00-05:00</li>
+                    <li> <b> Hira Dhamyal: </b> Tuesday 04:00-05:00 (GHC 6404), Wednesday 11:00-12:00 (GHC 5417)</li>
+                    <li> <b>Jakob Cassiman (SV): </b>Monday 03:00-05:00, Tuesday 01:00:03:00</li>
+                    <li> <b> Joshua Moavenzadeh: </b>Tuesday 04:00-05:00 (GHC 6404), Wednesday 03:00-04:00 (GHC 6404)</li>
+                    <li><b> Kai Hu: </b> Thursday 01:00-02:00 (GHC 5417), Saturday 01:00-06:00 (GHC 6404)</li>
+                    <li> <b>M. Daanish :</b> Monday 03:00-04:00 (GHC 6404), Friday 03:00-04:00 (GHC 5417)</li>
+                    <li> <b>Raphael Olivier:</b> Tuesday 12:00-01:00 (GHC 5417), Friday 11:00-12:00 </li>
+                    <li> <b>Sarvesh D.:</b> Tuesday 12:00-01:00 (GHC 5417), Thursday 03:00-04:00 (GHC 5417) </li>
+                    <li> <b>Simral Chaudhary:</b> Thursday 03:00-04:00 (GHC 5417), Friday 03:00-04:00 (GHC 5417) </li>
+                    <li> <b>William Hu: </b>Monday 05:00-06:00 (GHC 5417), Tuesday 01:00-02:00 (GHC 6404)</li>
+
+                    <!-- <li> Tuesday @ 3:30pm-5:00pm Location TBD</li>
+                    <li> Friday @ 10:30am-12:00pm NSH Atrium</li>
+                    <li> Doha: Sunday and Tuesday @ 5:00pm-6:30pm (Quatar Time)</li>
+                    <li> Kigali: TBD</li>
+                    <li> Bhiksha: Thursday, 11:00am-12:00pm</li> -->
+                    <li> TA hours are also available <a href="https://docs.google.com/spreadsheets/d/1C_HCJ17M0W1HjZZUV4bT_9xRVgm2_P1ckfphxh3T2hI/edit?usp=sharing">here.</a> </li>
+                </ul>
+            <p></p>
+                <h3>Prerequisites</h3>
+                <ol>
+                    <li>We will be using one of several toolkits (the primary toolkit for recitations/instruction is PyTorch). The toolkits are largely programmed in Python. You will need to be able to program in at least one of these languages. Alternately, you will be responsible for finding and learning a toolkit that requires programming in a language you are comfortable with, </li>
+                    <li>You will need familiarity with basic calculus (differentiation, chain rule), linear algebra and basic probability. </li>
+                </ol>
+                <h3>Units</h3>
+            <p>This course is worth 12 units.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h2>Course Work</h2>
+            <h3>Grading</h3>
+<p>Grading will be based on weekly quizzes (24%), homeworks (51%) and a course  project (25%).
+            </p><div>
+                <table class="rules-table">
+                    <tbody><tr class="rules-table-header"> <td></td><td></td> <td><b>Policy</b></td> </tr>
+                    <tr> <td><b>Quizzes</b></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td> <td>There will be weekly quizzes.
+<ul>
+<li> There are 14 quizzes in all. We will retain your best 12 scores.
+</li><li> Quizzes will generally (but not always) be released on Friday and due 48 hours later. 
+</li><li> Quizzes are scored by the number of correct answers.
+</li><li> <b>Quizzes will be worth 24% of your overall score.</b>
+</li></ul></td>
+</tr>
+                    <tr> <td><b>Assignments</b></td> <td></td><td>There will be five assignments in all. Assignments will include <i>autolab</i> components, where you must complete designated tasks, and a <i>kaggle</i> component where you compete with your colleagues. 
+<ul>
+<li> Autolab components are scored according to the number of correctly completed parts. 
+</li><li> We will post performance cutoffs for A, B, C, D and F for Kaggle competitions. These will translate to scores of 100, 80, 60, 40 and 0 respectively. Scores will be interpolated linearly between these cutoffs. 
+</li><li> Assignments will have a “preliminary submission deadline”, an “on-time submission deadline” and a “late-submission deadline.” 
+<ul>
+<li> <b>Early submission deadline:</b> You are required to make at least one submission to Kaggle by this deadline. People who miss this deadline will automatically lose 10% of subsequent marks they may get on the homework. This is intended to encourage students to begin working on their assignments early.
+</li><li> <b>On-time deadline:</b> People who submit by this deadline are eligible for up to five bonus points. These points will be computed by interpolation between the A cutoff and the highest performance obtained for the HW. The highest performance will get 105.
+</li><li> <b>Late deadline:</b> People who submit after the on-time deadline can still submit until the late deadline. There is a 10% penalty applied to your final score, for submitting late.
+</li><li> <b>Slack days:</b> Everyone gets up to 7 slack days, which they can distribute across all their homeworks.  Once you use up your slack days you will fall into the late-submission category by default. Slack days are accumulated over <i>all</i> parts of <i>all</i> homeworks, except HW0, to which no slack applies.
+</li><li> <b>Kaggle scoring:</b> We will use <i>max(max(on-time score), max(slack-day score), .0.9*max(late-submission score))</i> as your final score for the HW. If this happens to be a slack-days submission, slack days corresponding to the selected submission will be counted.
+</li></ul>
+</li><li> <b>Assignments carry 51% of your total score</b>. HW0 is worth 1%, while each of the subsequent four are worth 12.5%.
+</li></ul></td></tr>
+<tr><td><b>Project</b></td><td></td><td>All students are required to do a course project. <b>The project is worth 25% of your grade</b></td></tr> 
+<tr> <td><b>Final grade</b></td><td></td> <td>The end-of-term grade is curved. Your overall grade will depend on your performance relative to your classmates.</td></tr>
+                    <tr> <td><b>Pass/Fail</b></td><td></td> <td>Students registered for pass/fail must complete all quizzes, HWs and the project. A grade equivalent to B- is required to pass the course.</td></tr>
+                    <tr> <td><b>Auditing</b></td><td></td> <td>Auditors are not required to complete the course project, but must complete all quizzes and homeworks. We encourage doing a course project regardless.</td></tr>
+                </tbody></table>
+            </div>
+            <h3>Books</h3>
+            <p>The course will not follow a specific book, but will draw from a number of sources. We list relevant books at the end of this page. We will also put up links to relevant reading material for each class. Students are expected to familiarize themselves with the material before the class. The readings will sometimes be arcane and difficult to understand; if so, do not worry, we will present simpler explanations in class.</p>
+            <h3>Discussion board: Piazza</h3>
+            <p>We will use Piazza for discussions. <a href="https://piazza.com/class/jol3efnc5e63h8">Here is the link</a>. You should be automatically signed up if you're enrolled at the start of the semester. If not, please sign up.</p>
+            <!-- <h3>Wiki page</h3>
+            <p>We have created an experimental wiki explaining the types of neural networks in use today. <a href="https://www.contrib.andrew.cmu.edu/~dalud/deep-learning-wiki/doku.php">Here is the link</a>.</p> -->
+            <p>You can also find a nice catalog of models that are current in the literature <a href="http://www.datasciencecentral.com/profiles/blogs/concise-visual-summary-of-deep-learning-architectures">here</a>. We expect that you will be in a position to interpret, if not fully understand many of the architectures on the wiki and the catalog by the end of the course.</p>
+            <h3>Kaggle</h3>
+            <p><a href="https://www.kaggle.com/">Kaggle</a> is a popular data science platform where visitors compete to produce the best model for learning or analyzing a data set.</p>
+            <p>For assignments you will be submitting your evaluation results to a Kaggle leaderboard.</p>
+            <h3>Videos</h3>
+            <p>All recitations and lectures will be recorded and uploaded to Youtube. <a href="https://www.youtube.com/channel/UC8hYZGEkI2dDO8scT8C5UQA">Here is a link to the Youtube channel.</a> Links to individual lectures and recitations will also be posted below as they are uploaded. All videos for the Spring 2019 edition are tagged “S19”. CMU students can also access the videos on Panopto from
+                                <a href="https://mediaservices.cmu.edu/channel/Introduction%2Bto%2BDeep%2BLearning%2BSpring%2B2019/109500841">this link</a>.
+            </p><h3>Academic Integrity</h3>
+            <div>
+                You are expected to comply with the <a href="http://www.cmu.edu/policies/documents/Cheating.html">University Policy on Academic Integrity and Plagiarism</a>.
+                <ul>
+                    <li>You are allowed to talk with / work with other students on homework assignments</li>
+                    <li>You can share ideas but not code, you should submit your own code</li>
+                </ul>
+                Your course instructor reserves the right to determine an appropriate penalty based on the violation of academic dishonesty that occurs. Violations of the university policy can result in severe penalties including failing this course and possible expulsion from Carnegie Mellon University. If you have any questions about this policy and any work you are doing in the course, please feel free to contact your instructor for help.
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h2>Tentative Schedule</h2>
+            <div class="">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Lecture</th>
+                            <th>Date</th>
+                            <th>Topics</th>
+                            <th>Lecture notes/Slides</th>
+                            <th>Additional readings, if any</th>
+                            <th>Quizzes/Assignments</th>
+                            <th>Shadow Instructor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>
+                                <ul>
+                                    <li>Course logistics</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lecture0.logistics.pdf">Slides</a><br>
+                                <a href="https://youtu.be/u1LFTvpYvLM"> Video </a> 
+                            </td>
+                            <td></td>
+                            <td> </td>
+                            <td>Cody Smith </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>January 14</td>
+                            <td>
+                                <ul>
+                                    <li>Introduction to deep learning</li>
+                                    <li>Course logistics</li>
+                                    <li>History and cognitive basis of neural computation.</li>
+                                    <li>The perceptron / multi-layer perceptron</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lecture1.introduction.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=wqSZ5Z-Blpg&amp;feature=youtu.be"> Video </a><br>
+                            </td>
+                            <td></td>
+                            <td> <br> <font color="red">Assignment 0 due on January 20. </font><br></td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>January 18</td>
+                            <td>
+                                <ul>
+                                    <li>The neural net as a universal approximator</li>
+                                </ul>
+                            </td>
+                             <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lec2.universal.pdf">Slides</a><br>
+                                <a href="https://youtu.be/Nx4tNFO245E">Video </a>
+                 <!-- <a href="https://www.youtube.com/watch?v=zlnQyxiEGNM&t=2s">video</a> -->
+                                </td>
+                            <td>
+                                <ul>
+                                    <li><a href="https://www.sciencedirect.com/science/article/pii/089360809190009T?via%3Dihub">Approximation capabilities of multilayer feedforward networks</a></li>
+                                    <li><a href="http://cognitivemedium.com/magic_paper/assets/Hornik.pdf">Multilayer Feedforward Networks are
+Universal Approximators </a></li>
+                                </ul>
+                                <!--
+                                <ul>
+                                    <li><a href="https://pdfs.semanticscholar.org/f22f/6972e66bdd2e769fa64b0df0a13063c0c101.pdf">Hornik, Stinchcombe, and White - Multilayer Feedforward Networks Are Universal Approximators</a></li>
+                                    <li><a href="https://www.researchgate.net/publication/236736771_Shallow_vs_Deep_Sum-Product_Networks">Delalleau, Bengio - Shallow vs. Deep Sum-Product Networks</a></li>
+                                    <li><a href="http://mathsci.kaist.ac.kr/~nipl/mas557/VCD_ANN_3.pdf">Sontag - VC Dimension of Neural Networks</a></li>
+                                    <li><a href="https://arxiv.org/pdf/1708.06019.pdf">Friedland and Krell - A Capacity Scaling Law for Artificial Neural Networks</a></li>
+                                </ul> -->
+                            </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>January 23</td>
+                            <td>
+                                <ul>
+                                    <li>Training a neural network</li>
+                                    <li>Perceptron learning rule</li>
+                                    <li>Empirical Risk Minimization</li>
+                                    <li>Optimization by gradient descent</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lec3.learning.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=-4MpGWC1_nY&amp;feature=youtu.be">Video</a>
+                                <!-- <a href="slides/lec3.learning.pdf">slides</a><br>
+                                 <a href="https://www.youtube.com/watch?v=HyjB2uMZK5k">video</a> -->
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><a href="http://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf">
+                                    Understanding the difficulty of training deep feedforward neural networks</a></li>
+                                </ul>
+
+                               <!--  <ul>
+                                    <li>Goodfellow Chapter 6</li>
+                                    <li><a href="https://51d52ae2-a-62cb3a1a-s-sites.googlegroups.com/site/handoffnn/neural-network/can-kao-deneural-network-zi-liao/NN-30%E5%B9%B4%E7%99%BC%E5%B1%95.pdf?attachauth=ANoY7cq5XxLKsckxplkqgACkuTcu9kaOYpWQnQbOZypoNMyakHjPutq9fnibNOLeVHrqhwqNZaeGzQRWLIzt1vazuqvNktw4LmRfzBo7kfaY3JFzy2HOwolZiMIBMGzheMv7Hxsl1Lwqqn0YQvGrG7ikyEyrqryLS-un5oBNOR5OPgWIKkQwC-cEiLCzBkBBM9tgcVjndjnNO5ufQXxLhSswn_JnAlhQJZ3yxpdiB_8w9PuVCA25KJkI_fl3xTAjvz088_G2Mzv-5lh9kiRQazb4KwsxbIZkadClLRptlMboq9X2fHclRQ1rHV8jlZt4ue1XI284JLLq&attredirects=0">Widrow, Bernard and Lehr, Michael: 30 Years of Adaptive Neural Networks: Perceptron, Madaline, and Backpropogation</a></li>
+                                    <li><a href="https://arxiv.org/pdf/1305.0208.pdf">Mohri, Mehryar and Rostamizadeh, Afshin (2013). Perceptron Mistake Bounds</a></li>
+                                </ul> -->
+                            </td>
+                            <td>Assignment 1 released on January 24. 
+                            <!-- </br>Quiz 2 -->
+                            </td>
+                            <td> Cody Smith </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>January 28</td>
+                            <td>
+                                <ul>
+                                    <li>Back propagation</li>
+                                    <li>Calculus of back propagation</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lec4.backprop.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=41mGVK31CZ8&amp;feature=youtu.be">Video</a>
+                            </td>
+                            <td>
+                                <!-- <ul>
+                                    <li>
+                                        <a href="https://www.nature.com/articles/323533a0">Rumelhart, Hinton and Williams, 1986</a>
+                                    </li>
+                                        Note: We re-recorded the introduction for the online section after the lecture. To see the slides in order, watch the last few minutes of the video and then watch the video from the beginning. We will edit the video and upload soon.
+                                </ul> -->
+                             </td>
+                            <td></td>
+                            <td>Cody Smith </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>January 30</td>
+                            <td>
+                                <ul>
+                                    <li>Convergence in neural networks</li>
+                                    <li>Rates of convergence</li>
+                                    <li>Loss surfaces</li>
+                                    <li>Learning rates, and optimization methods</li>
+                                    <li>RMSProp, Adagrad, Momentum</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lec5.convergence.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=jFXd9JbXMYk&amp;feature=youtu.be">Video</a>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><a href="https://www.researchgate.net/publication/3183828_Back_propagation_fails_to_separate_where_perceptrons_succeed">Back propagation fails to separate where perceptrons succeed</a></li><a href="https://www.researchgate.net/publication/3183828_Back_propagation_fails_to_separate_where_perceptrons_succeed">
+                                </a></ul><a href="https://www.researchgate.net/publication/3183828_Back_propagation_fails_to_separate_where_perceptrons_succeed">
+                                
+                                <!-- <ul>
+<li><a href="http://nzini.com/lessons/Exposing+The+Hidden+Layer.html">Visualizing Hidden Layers (Optional)</a>
+                                    <li>Goodfellow Chapter 8</li>
+                                    <li><a href="http://paginas.fe.up.pt/~ee02162/dissertacao/RPROP%20paper.pdf">Riedmiller, Matin and Braun, Heinrich (1993). A Direct Adapative Method for Faster Backpropogation Learning: The RPROP Algorithm</a></li>
+                                    <li><a href="http://repository.cmu.edu/cgi/viewcontent.cgi?article=2799&context=compsci">Fahlman, Scott (1988). An empirical study of learning speed in backpropagation networks</a></li>
+                                </ul> -->
+                                    
+                                </a></td>
+                            <td></td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>February 4</td>
+                            <td>
+                                <ul>
+                                    <li>Stochastic gradient descent</li>
+                                    <li> Optimization </li>
+                                    <li>Acceleration</li>
+                                    <li>Overfitting and regularization</li>
+                                    <li>Tricks of the trade:
+                                        <ul>
+                                            <li>Choosing a divergence (loss) function</li>
+                                            <li>Batch normalization</li>
+                                            <li>Dropout</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td><a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lecture_6_SGD.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=teK--u4CM6I&amp;feature=youtu.be">Video</a>
+                <!--a href="https://www.youtube.com/watch?v=O6JUY0_VZIA&list=PLp-0K3kfddPwAs6VPBN5AwNmR23_QY41R">video </a><br> -->
+                            </td>
+                            <td>
+                                <ul>
+                                    <li> <a href="https://arxiv.org/pdf/1711.05101.pdf"> Decoupled Weight Decay Regularization </a></li>
+                                    <li><a href="https://openreview.net/forum?id=ryQu7f-RZ">On the Convergence of Adam and Beyond</a></li>
+                                    <li><a href="https://openreview.net/forum?id=rJ33wwxRb">SGD Learns Over-parameterized Networks that Provably Generalize on Linearly Separable Data</a></li>
+                                </ul>
+                                <!-- <ul>
+                                    <li>Goodfellow Chapter 7</li>
+                                    <li><a href="https://arxiv.org/pdf/1607.01981.pdf">Botev, Aleksandar, Lever, Guy and Barber, David (2016). Nesterov's Accelerated Gradient and Momentum as approximations to Regularised Update Descent</a></li>
+                                    <li><a href="https://arxiv.org/pdf/1412.6980.pdf">Kingma, Diederik and Ba, Jimmy Lei (2015). ADAM: A Method for Stochastic Optimization</a></li>
+                                    <li><a href="https://arxiv.org/pdf/1502.03167.pdf">Ioffe, Sergey and Szegedy, Christian (2015). Batch Normalization: Accelerating Deep Network Training By Reducing Internal Covariate Shift</a></li>
+                                    <li><a href="https://arxiv.org/abs/1702.03275">Ioffe, Sergey (2017). Batch Renormalization: Towards Reducing Minibatch Dependence in Batch-Normalized Models</a></li>
+                                </ul> -->
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>February 6</td>
+                            <td>
+                                <ul>
+                                    <li> Optimization </li>
+                                    <li> Generalization </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lecture_7_optimizations.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=LeoAraiZUOA&amp;feature=youtu.be">Video</a>
+                                <!-- <a href="slides/lec7.cascor.pdf">slides</a> -->
+                            </td>
+                            <td></td>
+                            <td> </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td> February 11</td>
+                            <td>
+                                <ul>
+                                    <li>Convolutional Neural Networks (CNNs)</li>
+                                    <li>Weights as templates</li>
+                                    <li>Translation invariance</li>
+                                    <li>Training with shared parameters</li>
+                                    <li>Arriving at the convolutional model</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lec8.CNN.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=qld9sTelY9U&amp;feature=youtu.be">Video</a>
+                                <!-- <a href="https://mediaservices.cmu.edu/media/Introduction+to+Deep+Learning_Lecture+8/1_6z2yu1oq/109500841">Video</a> -->
+                               <!--  <a href="slides/lec8.stochastic_gradient.pdf">slides</a><br>
+                <a href="https://www.youtube.com/watch?v=NmAVlL-yJLI">video</a> -->
+                             </td>
+                            <td>
+                                <ul>
+                                    <li><a href="https://arxiv.org/abs/1801.04381">MobileNetV2: Inverted Residuals and Linear Bottlenecks</a></li>
+                                    <li><a href="https://arxiv.org/abs/1512.03385">Deep Residual Learning for Image Recognition</a></li>
+                                    <li><a href="https://arxiv.org/abs/1608.06993">Densely Connected Convolutional Networks</a></li>
+                                </ul>
+                                <!-- <Goodfellow Chapter 9> -->
+                            </td>
+                            <td>
+                                <!-- <font color="red">Assignment 1 due </font><br> Assignment 2 -->
+                            </td>
+                            <td>Daanish Ali Khan, Hengrui Liu</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>February 13</td>
+                            <td>
+                                <ul>
+                                    <li> Convolutional Neural Networks </li>
+                                    <li>Models of vision</li>
+                                    <li>Neocognitron</li>
+                                    <li>Mathematical details of CNNs</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lec9.CNN.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=1qbfR69l51U&amp;feature=youtu.be">Video</a>
+                <!-- <a href="https://www.youtube.com/watch?v=WUKqug6qnBc">video</a> -->
+                             </td>
+                            <td>
+                            </td>
+                            <td><br><font color="red">Assignment 1 due on February 16 </font><br>Assignment 2 released on February 17.</td>
+                            <td>Sarvesh D., Hengrui Liu</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>February 18</td>
+                            <td>
+                                <!-- <font color="red">No inlcass lecture. It wil be recorded.</font> -->
+                                <ul>
+                                    <li> Backpropagation through CNNs</li>
+                                    <li> Increasing output map size</li>
+                                    <li> Transform invariance</li>
+                                    <li>Alexnet, Inception, VGG</li>
+                                </ul>
+                            </td>
+                            <td>
+                            <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lec10.CNN.pdf">Slides</a><br>
+                            <a href="https://www.youtube.com/watch?v=pOn0qdwAV-4">Video</a>
+                             
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><a href="https://arxiv.org/pdf/1707.01083.pdf">ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices</a></li>
+                                    <li><a href="https://arxiv.org/pdf/1801.04381.pdf">MobileNetV2: Inverted Residuals and Linear Bottlenecks</a></li><a href="https://arxiv.org/pdf/1801.04381.pdf">
+                                </a></ul><a href="https://arxiv.org/pdf/1801.04381.pdf">
+                            </a></td>
+                            <td></td>
+                            <td> Simral Chaudhary, Daanish Ali Khan</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>February 20</td>
+                            <td>
+                                <ul>
+                                    <li>Recurrent Neural Networks (RNNs)</li>
+                                    <li>Modeling series</li>
+                                    <li>Back propagation through time (BPTT)</li>
+                                    <li>Bidirectional RNNs</li> 
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lec11.recurrent.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=Y6zsrFbDlUQ&amp;feature=youtu.be">Video</a>
+                            </td>
+                            <td>
+                                <!--Goodfellow Chapter 10 -->
+                            </td>
+                            <td></td>
+                            <td>Simral Chaudhary, Sarvesh D.</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>February 25</td>
+                            <td>
+                                <ul>
+                                    <li>Stability</li>
+                                    <li>Exploding/vanishing gradients</li>
+                                    <li>Long Short-Term Memory Units (LSTMs) and variants</li>
+                                    <!--li>Resnets</li>->
+                                    <li>Loss functions for recurrent networks</li>
+                                    <li>Sequence prediction</li-->
+                                    
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lec12.recurrent.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=Z3ZOW10SvBI&amp;feature=youtu.be">Video</a>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/How%20to%20compute%20a%20derivative.pdf">How to compute a derivative</a>
+                            </td>
+                            <td></td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>February 27</td>
+                            <td>
+                                <ul>
+                                    <font color="#415cf4">Cascade Correlation Nets by Scott Fahlman</font>
+                                    
+                                </ul>
+                            </td>
+                            <td>
+
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/Cascor_Deep_Learning_v5.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=wAlPh6HGr9E&amp;feature=youtu.be">Video</a>
+                            </td>
+                            <td>
+                                <a href="https://www.cs.cmu.edu/~sef/sefPubs.htm">Cascade-Correlation</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>March 4</td>
+                            <td>
+                                <ul>
+                                    <font color="#415cf4">Continual Learning by Pulkit Agarwal</font>
+                                    
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/continual_learning_lecture.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=06_iBtEeUTc&amp;feature=youtu.be">Video</a>
+                            </td>
+                            <td>
+                                <a href="https://arxiv.org/pdf/1902.05522.pdf">Superposition of many models into one</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>March 6</td>
+                            <td>
+                                <ul>
+                                    <li>Sequence To Sequence Modeling</li>
+                                    <li>Connectionist Temporal Classification (CTC)</li>
+                                    <!-- <li> Attention </li> -->
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lec13.recurrent.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=UTIKFNy-OcI">Video </a><br>
+                                <!-- <a href="https://www.youtube.com/watch?v=aFY2ZV-gRwg&feature=youtu.be">VR-Video</a> -->
+                                <!-- <a href="slides.spring19/lec14.CTC.pdf">Slides</a><br> -->
+                                
+                            </td>
+                            <td>
+                                <!--ul>
+                                    <li>For PCA, Factor Analysis, Probabilistic PCA: Bishop Ch. 12</li>
+                                    <li>For Expectation Maximization / Variational Inference: Bishop Ch. 9.4, Ch. 10</li>
+                                </ul-->
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>March 8</td>
+                            <td>
+                                <ul>
+                                    <li>Connectionist Temporal Classification (CTC)</li>
+                                    <!-- <li> Attention </li> -->
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lec14.CTC.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=A8IhGQCurPc&amp;feature=youtu.be"> Video </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>March 18</td>
+                            <td>
+                                <ul>
+                                    <li>Attention Models
+                                    </li>
+                                   
+                                </ul>
+                                
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lec15.attention.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=jhTNZhIXmhk&amp;feature=youtu.be">Video</a>
+                            </td>
+                            <td>
+                                <!--ul>
+                                    <li><a href="https://arxiv.org/abs/1312.6114">Kingma, Diederik and Welling, Max (2014). Auto-Encoding Variational Bayes</a></li>
+                                    <li><a href="https://arxiv.org/abs/1312.6114">Kingma, Diederik and colleagues (2017). Improving Variational Inference with Inverse Autoregressive Flow</a></li>
+                                    <li><a href="https://arxiv.org/pdf/1702.08658.pdf">Zhao, Shengjia and colleagues (2017). Towards a Deeper Understanding of Variational Autoencoding Models</a></li>
+                                </ul-->
+                            </td>
+                            <td><br> <font color="red">Assignment 2 due on March 10. </font><br> Assignment 3 released on March 10. </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>March 20</td>
+                            <td>
+                                <ul>
+                                    <li>What do networks learn</li>
+                                    <li>Autoencoders and dimensionality reduction</li>
+                                   
+                                </ul>
+                                <!-- <ul>
+                                    <li>Sequence-to-sequence models, Attention models, examples from speech and language
+                                    </li>
+                                </ul> -->
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lec_16_representations.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=ujDa7LpVP78&amp;feature=youtu.be">Video </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>March 25</td>
+                            <td>
+                                <ul>
+                                    <li> Hopfield Networks </li>
+                                     <!-- <li>Learning representations</li>
+                                     <li>Transfer Learning</li>
+                                     <li>Multi-task frameworks </li> -->
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lec17.hopfield.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=RPKDewP3gwo&amp;feature=youtu.be">Video</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <!-- <td>Variational Autoencoders (VAEs)</td> -->
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>March 27</td>
+                            <td>
+                                <ul>
+                                    <li> Boltzmann Machines </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lec18.hopfield2.pdf">Slides</a><br>
+                            <a href="https://www.youtube.com/watch?v=-FvgowlYGPg&amp;feature=youtu.be">Video</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td> 
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>April 1</td>
+                            <td>
+                                <ul>
+                                    <li> Restricted Boltzman Machines (RBMs) </li>
+                                    <li> Deep Boltzman Machines (DBMs) </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/lec19.BM.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=8vnX0w0vc-Y&amp;feature=youtu.be">Video</a>
+                            </td>
+                            <td></td>
+                            <td><font color="red">Assignment 3 due on March 31. </font></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>April 3</td>
+                            <td>
+                                <ul>
+                                    <li> Linear Generative Models</li>
+                                    <li> Factor analysis </li>
+                                    <li> EM</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <!-- <a href="slides/lec19.NeuronCap.GeraldFriedland.pdf">slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=D2FK6-Pgtxc&list=PLp-0K3kfddPzwUvp5-SGfGGAJ0_Zxzldt">video</a> -->
+                            </td>
+                            <td></td>
+                            <td><br> Assignment 4 released on April 1. </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>April 8</td>
+                            <td>
+                                <ul>
+                                    <!-- <li>Variational Autoencoder </li> -->
+                                    <li> Generative Adversarial Networks (GANs) Part 1</li>
+                                    <li> Non-linear generators</li> 
+                                    
+                                    
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/bstriner_gans.pdf">Slides</a><br>
+                                <a href="https://www.youtube.com/watch?v=1irBjosv_kE&amp;feature=youtu.be">Video</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>April 10</td>
+                            <td>
+                                <ul>
+                                    
+                                    <li> Generative Adversarial Networks (GANs) Part 2</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/bstriner_gans_part_2.pdf">Slides</a><br>
+                                <a href="https://mediaservices.cmu.edu/media/Introduction+to+Deep+Learning+4-10-19.mp4/1_3hvy65lv/109500841">Video</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td> Chia-Wei </td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>April 15</td>
+                            <td>
+                                <ul>
+                                    
+                                    <li> Variational autoencoders </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="https://www.youtube.com/watch?v=jhy91Ao_nHY&amp;feature=youtu.be">Video</a><br>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/RL_1,2.pdf">Slides</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td>Chia-Wei </td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>April 17</td>
+                            <td>
+                                <ul>
+                                    <li>Reinforcement Learning Part 1</li>
+                                    <li> Markov Process </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="https://www.youtube.com/watch?v=qdFXHxQGu70&amp;feature=youtu.be">Video</a><br>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/RL_1,2.pdf">Slides</a>
+                            </td>
+                            <td>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>April 22</td>
+                            <td>
+                                <ul>
+                                    <li>Reinforcement Learning Part 2</li>
+                                    <li> Value and Policy Iterations </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/RL_3.pdf">Slides</a><br>
+                                <a href="https://youtu.be/FQw2l0AJ2iw">Video</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>April 24</td>
+                            <td>
+                                <ul>
+                                    <li>Reinforcement Learning Part 3</li>
+                                    <li>TD Learning</li>
+                                    <li>SARSA </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/RL_4.pdf">Slides</a><br>
+                                <a href="https://youtu.be/Hy4kAkBcyBc">Video</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>28</td>
+                            <td>April 29</td>
+                            <td>
+                                <ul>
+                                    <li>Q Learning</li>
+                                    <li>Deep Q Learning</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/RL_5.pdf">Slides</a><br>
+                                <a href="https://youtu.be/IbyBm7iNsQ8">Video</a>
+                            </td>
+                            <td></td>
+                            <td><font color="red">Assignments 4 due on April 28. </font></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>May 1</td>
+                            <td>
+                                <ul>
+                                   <li><font color="#415cf4">Guest lecture on biological models of cognition by Mike Tarr </font></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/slides.spring19/TarrDeepLearning.pdf">Slides</a><br>
+                                <a href="https://youtu.be/_oLFITQTXFI">Video</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            <h2>Tentative Schedule of Recitations (Note: dates may shift)</h2>
+
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Recitation</th>
+                            <th>Date</th>
+                            <th>Topics</th>
+                            <th>Lecture notes/Slides</th>
+                            <th>Notebook</th>
+                            <th>Videos</th>
+                            <th>Instructor </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0 - Part 1</td>
+                            <td>January 2</td>
+                            <td>Python coding for the deep learning student</td>
+                            <td></td>
+                             <td>
+                            <a href="https://github.com/cmudeeplearning11785/Spring2019_Tutorials/blob/master/recitation-0/Python%20for%20Deep%20Learning.ipynb"> Notebook </a>
+                            </td>
+                            
+                            <td><a href="https://www.youtube.com/watch?v=gVmKmgTSoO4&amp;feature=youtu.be">Part 1 video</a><br></td>
+                            <td>Simral Chaudhary, <br>
+                                Sarvesh D.</td>
+
+                        </tr>
+                        <tr>
+                            <td>0 - Part 2</td>
+                            <td>January 2</td>
+                            <td>Python coding for the deep learning student</td>
+                            <td></td>
+                             <td>
+                            <a href="https://github.com/cmudeeplearning11785/Spring2019_Tutorials/blob/master/recitation-0/Numpy%20%26%20PyTorch.ipynb">
+                            Notebook </a>
+                            </td>
+                            
+                            <td><a href="https://www.youtube.com/watch?v=EUGAq1l-kAI">Part 2 video</a></td>
+                            <td>Simral Chaudhary, <br>
+                                Sarvesh D.</td>
+
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>January 16</td>
+                            <td>Amazon Web Services (AWS)</td>
+                             <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/recitations.spring19/AWS_Recitation_0.pdf">Slides</a><br>
+                                
+                    <!-- <a href="recitations/rec1.aws.pdf">slides</a><br><a href="recitations/rec1.aws.mp4">video</a><br>
+<a href="http://deeplearning.cs.cmu.edu/recitations/rec1.aws.mp4">video</a> -->
+                            </td>
+                            <td></td>
+                            <td><a href="https://www.youtube.com/watch?v=jqKjHeDkJiM&amp;feature=youtu.be">Video</a></td>
+                            <td>David Bick, Cody Smith</td>
+
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>January 25</td>
+                            <td>Your First Deep Learning Code</td>
+                            <td> <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/recitations.spring19/Your_first_Deep_Learning_code.pdf">Slides</a></td>
+                            <td></td>
+                            <td><a href="https://www.youtube.com/watch?v=m-8wof69cGY&amp;feature=youtu.be">Video</a></td>
+                            <td> Alex Litzenberger, Daanish Ali Khan</td>
+                
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>February 1</td>
+                            <td>Efficient Deep Learning/Optimization Methods</td>
+                            <td><a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/recitations.spring19/recitation_3.pdf">Slides</a></td>
+                            <td><a href="https://github.com/cmudeeplearning11785/Fall2018-tutorials/blob/master/recitation-3/11785-Fall18-Recitation-3.ipynb">Notebook</a></td>
+                            <td><a href="https://www.youtube.com/watch?v=GTNn_gNirH8&amp;feature=youtu.be">Video</a></td>
+                            <td>Kai Hu, Cody Smith, Josh Movenzadeh </td>
+                
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>February 8</td>
+                            <td>Debugging and Visualization</td>
+                            <td><a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/recitations.spring19/slides_debugging.pdf">Slides</a> </td>
+                            <td><a href="https://github.com/cmudeeplearning11785/Spring2019_Tutorials/blob/master/recitation-4/DataVisualization.ipynb">Notebook</a></td>
+                            <td><a href="https://www.youtube.com/watch?v=BEGyLf-Vzqg&amp;feature=youtu.be">Video</a></td>
+                            <td>Raphael Olivier, Sarvesh D. </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>February 15</td>
+                            <td>Convolutional Neural Networks</td>
+                            <td><a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/recitations.spring19/recitation_cnn_1.pdf">Slides</a></td>
+                            <td><a href="https://github.com/cmudeeplearning11785/Spring2019_Tutorials/blob/master/recitation-5/CNNs.ipynb">Notebook</a></td>
+                            <td><a href="https://www.youtube.com/watch?v=1Oq6G0D4I5o&amp;feature=youtu.be">Video</a></td>
+                            <td>Simral Chaudhary, Hengrui Liu, William Hu</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>February 22</td>
+                            <td>CNNs:  HW2</td>
+                            <td><a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/recitations.spring19/Recitation-6_HW2P2.pdf">Slides</a><br></td>
+                            <td><a href="https://github.com/cmudeeplearning11785/Spring2019_Tutorials/blob/master/recitation-6/recitation_6.ipynb">Notebook</a></td>
+                            <td><a href="https://www.youtube.com/watch?v=YxnzQBZjIAs&amp;feature=youtu.be">Video</a></td>
+                            <td>Hira Dhamyal, Hengrui Liu, Sarvesh D.</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>March 1</td>
+                            <td>Recurrent Neural Networks</td>
+                            <td><a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/recitations.spring19/RNN_Recitation.pdf">Slides</a><br> </td>
+                            <td><a href="https://github.com/cmudeeplearning11785/Spring2019_Tutorials/tree/master/recitation-7">Notebook</a></td>
+                            <td><a href="https://www.youtube.com/watch?v=5_18sqjXgXg&amp;feature=youtu.be">Video</a></td>
+                            <td>Daanish Mir, Jakob Cassiman, David Bick</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>March 8</td>
+                            <td>RNN: CTC</td>
+                            <td><a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/recitations.spring19/CTCrecitationp1.pptx">Slides - p1</a><br>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/recitations.spring19/RNNRecitation.pptx">Slides - p2</a>
+                            </td>
+                            <td><a href="https://github.com/cmudeeplearning11785/Spring2019_Tutorials/blob/master/recitation-8/recitation-8.ipynb">Notebook</a></td>
+                            <td><a href="https://www.youtube.com/watch?v=zR92UBPAxRw&amp;feature=youtu.be"> Video </a></td>
+                            <td>Alex Litzenberger, William Hu</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>March 22</td>
+                            <td>Attention</td>
+                             <td><a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/recitations.spring19/Recitation_8.pdf">Slides</a></td>
+                            <td><a href="https://github.com/cmudeeplearning11785/Spring2019_Tutorials/blob/master/recitation-9/seq2seq_translation_tutorial.ipynb">Notebook</a></td>
+                            <td><a href="https://www.youtube.com/watch?v=JXTLrhUTs14&amp;feature=youtu.be"> Video </a></td>
+                            <td>Daanish Mir, Jakob Cassiman, Simral C.</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>March 29</td>
+                            <td>Variation Auto Encoders</td>
+                            <td>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/recitations.spring19/Representation_learning.pdf">Slide1</a><br>
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/recitations.spring19/Variational_Autoencoder.pdf">Slide2</a><br>
+                    <!-- <a href = "https://www.youtube.com/watch?v=ULhYUewFGKY&list=PLp-0K3kfddPzi2tb2PwoTmii8lwBmOqg7">video</a> -->
+                            </td>
+                            <td></td>
+                            <td><a href="https://www.youtube.com/watch?v=fCOtEDE8aII&amp;feature=youtu.be">Video</a></td>
+                            <td>Raphael Olivier, Shaden Shaar, William Hu</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>April 5</td>
+                            <td>Attention </td>
+                            <td><a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/recitations.spring19/recitation_11.pdf">Slides</a></td>
+                            <td></td>
+                            <td><a href="https://mediaservices.cmu.edu/media/Introduction+to+Deep+Learning+77/1_oj3e85tt/109500841">Video</a></td>
+                            <td>David, Josh </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>April 19</td>
+                            <td>GANs</td>
+                            <td><a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/recitations.spring19/GAN_recitation.pdf">Slides</a></td>
+                            <td></td>
+                            <td><a href="https://www.youtube.com/watch?v=AtSPa4T_6R8&amp;feature=youtu.be">Video</a></td>
+                            <td>Hira, Simral, William </td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>April 26</td>
+                            <td>Reinforcement Learning</td>
+                            <td><a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/recitations.spring19/RL-recitation.pptx">Slides</a></td>
+                            <td></td>
+                            <td><a href="https://youtu.be/vU7gBB5D8B0">Video</a></td>
+                            <td>Alex, Josh</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2> Homeworks </h2>
+                <p> Most homeworks require submissions to autolab. If you are an autolab novice <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/homeworks/Autolab%20for%20Dummies.pdf">here is an “autolab for dummies” document</a> to help you.
+                </p><table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Number</th>
+                            <th>Part</th>
+                            <th>Topics</th>
+                            <th>Release date</th>
+                            <th>Early-submission deadline</th>
+                            <th>On-time deadline</th>
+                            <th>Links </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HW0</td>
+                            <td>-</td>
+                            <td>Python coding for DL</td>
+                            <td>2 Jan</td>
+			                 <td>none</td>
+			                 <td>20 Jan</td>
+                             <td> <a href="http://deeplearning.cs.cmu.edu/homeworks/hw0/11_785_s19_Homework_0.pdf"> pdf </a><br>
+                             <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/homeworks/hw0"> html </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>HW1</td>
+                            <td>1</td>
+                            <td>An Introduction to Neural Networks</td>
+                            <td>24 Jan</td>
+                             <td>-</td>
+                             <td>16 Feb</td>
+                             <td> <a href="http://deeplearning.cs.cmu.edu/homeworks/hw1/Homework_1_S19.pdf"> pdf </a><br>
+                             <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/homeworks/hw1/hw1p1.html"> html </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>2</td>
+                            <td>Frame level classification of speech</td>
+                            <td>24 Jan</td>
+                             <td>3 Feb</td>
+                             <td>16 Feb</td>
+                             <td> 
+                                <!-- <a href="http://deeplearning.cs.cmu.edu/homeworks/hw0/11_785_s19_Homework_0.pdf"> pdf </a><br> -->
+                                <a href="https://www.kaggle.com/c/11-785hw1p2-s19"> Kaggle </a><br>
+                             <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/homeworks/hw1/hw1p2.html"> html </a>
+                            </td>
+                        </tr>
+                        <!-- 11785s19-hw2p2-verification-->
+                        <!-- Homework_1_S19 -->
+                        <tr>
+                            <td>HW2</td>
+                            <td>1</td>
+                            <td>CNN</td>
+                            <td>17 Feb</td>
+                             <td>-</td>
+                             <td>10 March</td>
+                             <td> 
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/homeworks/hw2/hw2p1.pdf"> pdf </a><br>
+                             
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>2</td>
+                            <td>Face Classification/Verification via CNN</td>
+                            <td>17 Feb</td>
+                             <td>1 March</td>
+                             <td>10 March</td>
+                             <td> 
+                                <!-- <a href="http://deeplearning.cs.cmu.edu/homeworks/hw0/11_785_s19_Homework_0.pdf"> pdf </a><br> -->
+                                <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/homeworks/hw2/Hw2p2.pdf"> pdf </a> <br>
+                                <a href="https://www.kaggle.com/c/11785-s19-hw2p2-classification"> Classification Kaggle </a> <br>
+                                <a href="https://www.kaggle.com/c/11785-s19-hw2p2-verification2"> Verification Kaggle </a> <br>
+                                <a href="https://www.kaggle.com/c/homework-2-part-2-classification-slack"> Class. Slack Kaggle</a><br>
+                                <a href="https://www.kaggle.com/c/11785-s19-hw2p2-verification2-slack">Veri. Slack Kaggle </a><br>
+                                <a href="https://www.kaggle.com/c/homework-2-part-2-classification-late"> Class. Late Kaggle </a><br>
+                                <a href="https://www.kaggle.com/c/11785-s19-hw2p2-verification2-late"> Veri. Late Kaggle </a>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>HW3</td>
+                            <td>1</td>
+                            <td>GRU</td>
+                            <td> 16 March </td>
+                             <td> - </td>
+                             <td>31 March</td>
+                             <td> <a href="http://deeplearning.cs.cmu.edu/homeworks/hw3/hw3p1.pdf"> pdf </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>2</td>
+                            <td>Utterance to Phoneme Mapping</td>
+                            <td> 11 March </td>
+                             <td> 21 March </td>
+                             <td>31 March</td>
+                             <td> <a href="http://deeplearning.cs.cmu.edu/homeworks/hw3/hw3p2.pdf"> pdf </a><br>
+                                <a href="https://www.kaggle.com/c/11785-s19-hw3p2v2#CTC%20Loss">Kaggle</a><br>
+                                <a href="https://www.kaggle.com/c/11785-s19-hw3p2-slack">Slack Kaggle</a><br>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNfZPQhLLDUCne8JZMQyAb9CGkJx3Uzom5_xHOSqH0dkZQwQ/viewform">Code Submission Form</a><br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Hw4</td>
+                            <td>1</td>
+                            <td>Language Modeling using RNNs</td>
+                            <td>1 April</td>
+                             <td> - </td>
+                             <td> 28 April </td>
+                             <td> <a href="http://deeplearning.cs.cmu.edu/homeworks/hw4/hw4p1.pdf"> pdf </a><br>
+                                <!-- <a href="https://www.kaggle.com/c/11785-s19-hw3p2v2#CTC%20Loss">Kaggle</a> -->
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>2</td>
+                            <td>Attention</td>
+                            <td> 1 April </td>
+                             <td> 20 April </td>
+                             <td> 28 April </td>
+                             <td> <a href="http://deeplearning.cs.cmu.edu/homeworks/hw4/hw4p2.pdf"> pdf </a><br>
+                                <a href="https://www.kaggle.com/c/11785-s19-hw4p2">Kaggle</a>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Project</td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                             <td> </td>
+                             <td></td>
+                             <td> <a href="https://www.overleaf.com/13950493cwzppdxrrqbv"> Template </a>
+                             </td><td> <a href="http://www.cs.cmu.edu/afs/cs/user/bhiksha/WWW/courses/deeplearning/Fall.2018/www/posterinstructions/poster_description.html"> Poster instructions</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <font color="red">Poster session: Monday May 6th, 3-5pm, Tuesday May 7th 3-5pm, Location (both days):  GHC 7107 Atrium.</font>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+        <!-- <h3><a href="slides/ProjectIdeas.pptx">Some ideas for projects</a></h3> -->
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h2>Documentation and Tools</h2>
+            <h3>Textbooks</h3>
+            <div class="textbook">
+                <div class="textbook-img-container"><img src="./cmu-11-785-deep-learning-course-page_files/Goodfellow.jpg" alt="Deep Learning"></div>
+                <div class="textbook-info">
+                    <span class="textbook-info-item"><a href="http://deeplearning.cs.cmu.edu/data/DeepLearningBook.zip"><b>Deep Learning</b></a></span>
+                    <span class="textbook-info-item">By Ian Goodfellow, Yoshua Bengio, Aaron Courville</span>
+                    <span class="textbook-info-item"><i>Online book, 2017</i></span>
+                </div>
+            </div>
+            <div class="textbook">
+                <div class="textbook-img-container"><img src="./cmu-11-785-deep-learning-course-page_files/Nielsen.png" alt="Neural Networks and Deep Learning"></div>
+                <div class="textbook-info">
+                    <span class="textbook-info-item"><a href="http://neuralnetworksanddeeplearning.com/"><b>Neural Networks and Deep Learning</b></a></span>
+                    <span class="textbook-info-item">By Michael Nielsen</span>
+                    <span class="textbook-info-item"><i>Online book, 2016</i></span>
+                </div>
+            </div>
+            <div class="textbook">
+                <div class="textbook-img-container"><img src="./cmu-11-785-deep-learning-course-page_files/Brownlee.png" alt="Deep Learning with Python"></div>
+                <div class="textbook-info">
+                    <span class="textbook-info-item"><a href="https://machinelearningmastery.com/deep-learning-with-python/"><b>Deep Learning with Python</b></a></span>
+                    <span class="textbook-info-item">By J. Brownlee</span>
+                    <span class="textbook-info-item"><i></i></span>
+                </div>
+            </div>
+            <div class="textbook">
+                <div class="textbook-img-container"><img src="./cmu-11-785-deep-learning-course-page_files/Lewis.jpg" alt="Deep Learning Step by Step with Python"></div>
+                <div class="textbook-info">
+                    <span class="textbook-info-item"><a href="https://www.amazon.com/Deep-Learning-Step-Python-Introduction/dp/1535410264"><b>Deep Learning Step by Step with Python: A Very Gentle Introduction to Deep Neural Networks for Practical Data Science</b></a></span>
+                    <span class="textbook-info-item">By N. D. Lewis</span>
+                    <span class="textbook-info-item"><i></i></span>
+                </div>
+            </div>
+            <div class="textbook">
+                <div class="textbook-img-container"><img src="./cmu-11-785-deep-learning-course-page_files/Rumelhart.jpg" alt="Parallel Distributed Processing"></div>
+                <div class="textbook-info">
+                    <span class="textbook-info-item"><a href="https://mitpress.mit.edu/books/parallel-distributed-processing"><b>Parallel Distributed Processing</b></a></span>
+                    <span class="textbook-info-item">By Rumelhart and McClelland</span>
+                    <span class="textbook-info-item"><i>Out of print, 1986</i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" container">
+        <div class="row">
+</div>
+</div>
+
+
+</body></html>
