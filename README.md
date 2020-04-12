@@ -98,3 +98,4 @@ numbered recitations subfolders contain only lone PDFs.
 Recitation 13 on Reinforcement Learning, referred to as Recitation 12 on the YouTube playlist,
 has no accompanying PDF download. Perhaps a substitute can be found from the Spring 2020 iteration?
 
+* readings - not included due to space considerations. May upload in the future, or provide a linked list. 
