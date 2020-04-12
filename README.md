@@ -64,6 +64,59 @@ and faithfully serve as a substitute for the Spring 2019 assignments.
 In order to stand by the substitution with a higher degree of confidence, the Spring 2019 live Kaggle links content need to
 be scrutinised and checked against the content in the Spring 2020 assignments data - pending.
 
+"spring-2020-complete" homework assignment audit - these are exclusively code-implementation based.
+
+Some elements of the homework assignments will use a downloadable autograder script to mark certain elements
+of the student's code implementation. Then the implementation is submitted to CMU Autolab. The functionality of the local autograder script is similar to that of Autolab. It is stated in HWP1 that the only difference is that:
+
+- the autograder compares [the student's implementation] outputs and attributes with prestored
+data.
+- whilst autolab compares [the student's implementation] to a solution.
+
+Furthermore, the submission to AutoLab will record the student's marks. It is also stated that a code implementation which passes the local autograder should, in theory, pass the CMU autolab.
+
+Other elements of the homework assignments are part of open-ended competitions hosted on Kaggle.com. Relevant data can be downloaded from here. CMU students are graded on their rankings on the leaderboard. 
+
+Implementation hints are provided in the form of starter-code and relevant paper references.
+
+As part of my audit, I had to assess whether I, or anyone else interested in using these materials for self-study, could make fruitful use of the materials to accompany the course.
+
+The key question is whether someone self-studying, who does not have access to CMU Autolab, but who does access to the local autograder script would be able to make it through the code implemetations.
+
+This is less of an issue for the open-ended Kaggle competiton parts of the homework assignments.
+
+A closer audit of the materials, by folder:
+
+hw-0 - a self-contained Jupyter notebook for pre-requisite skills in NumPy and PyTorch
+
+hw-1, part 1 - all materials mentioned in the PDF file are contained in hw1p1_handout.tar, and this has been checked. Looks like it is possible for those self-studying to roughly check their code implementations using the local autograder without submission to Autolab.
+
+hw-1, part 2 - all materials needed for this assignment are at the Kaggle page specified within the PDF.
+
+hw-2, part 1 - all materials mentioned in the PDF file are contained in hw2p1_handout.tar, and this has been checked. Again, it looks possible for those self-studying to roughly check theircode implementations using the local autograder without submission to Autolab.
+
+hw-2, part 2 - all materials needed for this assignment are at the Kaggle page specified within the pdf. The compressed file containing the data is stored as "11-785-hw2p2-s20.tgz.zip" at:
+
+https://kaggle.com/c/11-785-s20-hw2p2-classification/data
+
+The relevant compressed folders within "11-785-hw2p2-s20.tgz.zip" are actually .zip files, not .tar files, which is what the PDF,  states under "4.1 File Structure". Other than this negligible detail, all the files to carry out the project are available, and can be submitted to Kaggle.
+
+hw-3, part 1 - all the materials mentioned in the PDF file are contained in hw3p1_handout.tar, and this has been checked. There is a small issue in that the PDF file  mentions a script gru.py that is supposed to be in the mytorch subfolder of the .tar file; but none exists. There is however a gru_cell.py file, so presumably what is written in the PDF is a mild typo. Again, it looks possible for those self-studying to roughly check their code implementations using the local autograder without submission to Autolab.
+
+hw-3, part 2 - the PDF specfies that this part of the proejct is Kaggle based, but does not provide the link, nor is it provided on the coursepage. The link is the following one:
+
+https://www.kaggle.com/c/homework-3-part-2-11785-spring-2020/data
+
+All the materials mentioned on the PDF are consistent with what is listed in the Kaggle link above. All files to carry out the project are therefore available for use.
+
+hw4, part 1 - no materials available from the coursepage, although the PDF file specifies a Jupyter notebook and .tar file. Perhaps it can be found in one of the materials files in the Spring 2020 recitation series? **Pending checking**
+
+hw4, part 2 - the PDF specifies that this part of the project is Kaggle based, but does not provide link, nor is it provided on the coursepage. The link is the following one:
+
+https://www.kaggle.com/c/11-785-s20-hw4p2/data
+
+There are some minor differences between the script names specified in the PDF file, and the scripts listed on the Kaggle data page. But without having done the exercises, it looks consistent and workable.
+
 *lecture-slides - all pdfs checked and consistent with coursepage, except:
 
 Lecture 24 - Variational Autoencoders - a duplicate reinforcement learning lecture was uploaded
