@@ -2,6 +2,8 @@
 
 CMU 11-785 Deep Learning Spring 2019 (Bhiksha Raj)
 
+**N.B. This has been superceded with a later version, for which there is a complete set of publically available materials, which I have audited, but have not had time to write up my audit of.**
+
 A fully organised, integrity checked repo containing all lecture materials available at
 the following coursepage:
 
